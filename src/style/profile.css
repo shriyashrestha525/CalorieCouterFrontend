@@ -1,0 +1,62 @@
+.body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.calories{
+    background-color: beige;
+    height: 80px;
+    width: 500px;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    padding-left: 50px;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.nutrition{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 30px;
+    margin-bottom: 40px;
+    
+    
+}
+
+.fat, .protein, .carbs{
+    border-radius: 12px;
+    background-color: beige;
+    height: 140px;
+    width: 200px;
+    padding: 6px;
+    padding-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.recent{
+    align-self: flex-start;
+}
+
+.recent h3{
+    margin-bottom: 10px;
+}
+
+.history{
+    height: auto;
+    width: 400px;
+    background-color: beige;
+    border-radius: 12px;
+    padding: 6px;
+}
+
+
+

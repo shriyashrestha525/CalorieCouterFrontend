@@ -1,0 +1,60 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+#center-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 40px;
+    font-weight: bold;
+    color: red;
+    transition: transform 600ms ease-in, opacity 600ms ease-out;
+}
+.text-change{
+    animation: scaleText 1s linear;
+}
+@keyframes scaleText {
+    0%{
+        transform: scale(1);
+        opacity: 1;
+    }
+    50%{
+        transform: scale(1.5);
+        opacity: 0.5;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+#button{
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    display: flex;
+    font-size: 25px;
+    align-items: center;
+    cursor: pointer;
+    justify-content: center;
+    background-color: aqua;
+    transition: box-shadow 600ms ease-in-out;
+    transition: transform 600ms ease;
+}
+
+#button:hover{
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.6);
+    animation: rotate-button 1s linear 4;
+}
+@keyframes rotate-button {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
