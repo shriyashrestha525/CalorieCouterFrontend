@@ -1,11 +1,12 @@
 body {
     min-height: 100vh;
     width: 100%;
-    background-image: url('src/assets/calorieb.jpg');
+    /* background-image: url('src/assets/caloriee.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    background-attachment: fixed;
+    background-attachment: fixed; */
+    background-color: white !important;
     margin: 0;
     font-family: 'Arial', sans-serif;
     overflow-y: auto;
@@ -17,18 +18,126 @@ body {
     align-items: center;
     justify-content: center;
     padding: 20px;
+    
 }
 
+.first{
+    display: flex; /* Makes items side by side */
+    align-items: center; /* Aligns items vertically */
+    justify-content: center; /* Centers content */
+    gap: 20px; /* Space between image and quote */
+    width: 100%;
+    padding: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 35px;
+    margin-top: 400px;
+}
 .quote {
-    background-color: #EFD7C2;
+    
     border-radius: 10px;
     padding: 15px 20px;
     font-size: 22px;
-    text-align: center;
+    text-align: left;
     max-width: 600px;
-    margin: 20px auto;
+    flex: 1;
+    max-height: 250px; /* Limit the height */
+    overflow: hidden;
     
+}
+
+
+
+.calculate-btn-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
     
+}
+
+
+
+.calculate-btn-container button {
+    font-size: 18px;
+    padding: 10px 20px;
+    background-color: #dcae96;
+    color: white;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 250px;
+    justify-content: center; 
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden;
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    
+}
+
+
+.image{
+    width: 450px;
+}
+
+.image img {
+    max-width: 100%;  /* Ensures image doesn't overflow its container */
+    width: 100%;  /* Adjust size */
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.second {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    flex-wrap: wrap;
+    flex-direction: row-reverse; /* Places image on the left */
+    height: 300px;
+    overflow: hidden;
+    margin-bottom: 25px;
+}
+
+.text2 p{
+    font-size: 16px;
+}
+
+.image2 {
+    width: 450px;
+    height: 350px;
+    overflow: hidden;
+    
+}
+
+.image2 img {
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: contain;
+}
+
+.third{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+
+.text3 p{
+    font-size: 16px;
+
 }
 
 .text-container {
@@ -40,6 +149,8 @@ body {
     width: 100%;
 }
 
+
+
 .text-box {
     background-color: #FFC099;
     border-radius: 10px;
@@ -50,52 +161,52 @@ body {
     box-sizing: border-box;
 }
 
-.calculate-btn-container {
-    display: flex;
-    justify-content: center;
+.footers{
+    
+    background-color: #f8f9fa;
+    padding: 10px;
+    text-align: center;
     width: 100%;
-    margin-top: 30px;
+    font-size: 14px;
+    border-top: 1px solid #ddd;
+
 }
 
-
-
-.calculate-btn-container button {
-    font-size: 18px;
-    padding: 10px 20px;
-    border-radius: 15px;
-    background-color: #856244;
-    color: white;
-    border: none;
+.footer-link {
     display: flex;
-    align-items: center;
-    gap: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    min-width: 200px; /* Ensure the buttons have the same width */
-    justify-content: center; 
-    white-space: nowrap; /* Prevent text from wrapping */
-    overflow: hidden;
-}
-
-.btn{
-    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-    gap: 10px;
+    gap: 15px;
+    margin-bottom: 10px;
 }
 
-.calculate-btn-container button:hover {
-    background-color: #6b4c33;
+.footer-links a {
+    color: black;
+    text-decoration: none;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .first {
+        flex-direction: column; /* Stack items vertically */
+        text-align: center; /* Center text for smaller screens */
+        margin-top: 650px;
+    }
     .text-box {
         width: 90%;
     }
 
+    .image img {
+        display: flex;
+        justify-content: center; /* Centers image horizontally */
+        align-items: center;
+        width: 80%; /* Adjust image size for smaller screens */
+    }
+
     .quote {
         font-size: 18px;
+        max-width: 100%;
+        max-height: 200px;
     }
 
     .calculate-btn-container {
@@ -108,5 +219,25 @@ body {
         min-width: 100%; /* Ensure buttons take up full width on mobile */
         font-size: 14px;
     }
+
+    .second {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        text-align: center;
+        width: 100%;
+        height: 400px;
+    }
+    
+    .image2 {
+        width: 100%;
+        height: 250px;
+        
+    }
+
+    .image2 img {
+        width: 100%;
+        height: 100%;  /* Maintain the aspect ratio */
+        object-fit: contain;  /* Ensure the image fits within its container */
+    }
+
 
 }

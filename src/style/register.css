@@ -1,52 +1,115 @@
-#register-box{
+/* Full-page background */
+.registration {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('src/assets/caloried.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Registration box styling */
+#register-box {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 650px;
-    background-color: bisque;
-    border: 1px solid red;
+    background-color: white;
+    border: 1px solid black;
     border-radius: 20px;
     padding: 20px;
-    box-shadow: 0px 0px 40px 10px rgba(137, 43, 226, 0.56);
+    margin-top: 200px;
 }
-#title{
+
+/* Title styling */
+#title {
     font-size: 30px;
     font-weight: bold;
     margin-bottom: 20px;
+    text-align: center;
 }
-#re{
-    border-bottom-width: 3px;
-    border-bottom-style: solid;
-    border-bottom-color: blue;
-}
-.row-field{
+
+/* Row field styling for form fields */
+.row-field {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    width: 100%; /* Full width */
+    margin-bottom: 10px; /* Adds spacing between fields */
 }
-#gender{
+
+/* Gender section styling */
+#gender {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 5px;
 }
-.g{
+
+.g {
     display: flex;
-    justify-content:start;
+    justify-content: flex-start;
     align-items: center;
 }
-.g input{
+
+.g input {
     height: 20px;
     width: 20px;
     margin-right: 10px;
 }
-#reg-button{
+
+/* Submit button styling */
+#reg-button {
     display: flex;
     justify-content: center;
+    align-items: center;
+    margin-top: 20px;
 }
-#reg-button input{
-    background-color: chocolate;
+
+#login-button {
+    background-color: #4CAF50;
     color: white;
     font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+}
+
+/* Error message styling */
+.error-message {
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+/* Input field styling */
+.row-field input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 4px;
+    background-color: white;
+    color: black;
+    border: 1px solid #ccc;
+}
+
+/* Styling for input fields with errors */
+.row-field input.error {
+    border-color: red;
+}
+
+/* Autofill input field styling */
+input:-webkit-autofill {
+    background-color: white !important;
+    -webkit-box-shadow: 0 0 0px 1000px beige inset !important;
+    color: black !important;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+    transition: background-color 5000s ease-in-out 0s;
 }

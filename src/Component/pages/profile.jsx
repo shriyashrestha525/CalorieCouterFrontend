@@ -21,7 +21,7 @@ export default function Profile() {
       try {
         const authToken = localStorage.getItem('authToken');  // Retrieve auth token
 
-        const response = await fetch("http://127.0.0.1:8000/api/recent_foods/", {
+        const response = await fetch(`http://127.0.0.1:8000/api/recent_foods/`, {
           headers: {
             'Authorization': `Bearer ${authToken}`,
           }
@@ -69,7 +69,7 @@ export default function Profile() {
     };
 
     fetchRecentFoods();
-  }, [dailyCalories, dailyProtein, dailyFats, dailyCarbs]);
+  }, [dailyCalories, dailyProtein, dailyFats, dailyCarbs, recentFoods.length]);
 
   return (
     <div className='body'>

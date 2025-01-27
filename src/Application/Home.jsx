@@ -28,31 +28,67 @@ const Home = ({IsLoggedIn}) => {
     return (
         
         <div className="home-container">
-            <div className="quote">
-                <h3>Know your Food, Love your Health, Count your Calories</h3>
+            <div className="first">
+                <div className="quote">
+                    <h1>Know your Food, Love your Health, Count your Calories</h1>
+                    <div className="calculate-btn-container">
+                    {IsLoggedIn ? (
+                        <div className="btn">
+                            <button onClick= {handleNavigate}>Calculate your Calories<FaLongArrowAltRight /></button>
+                        </div>
+                    ):(
+                        <button onClick= {handleLogin}>Calculate your Calories<FaLongArrowAltRight /></button>
+                        
+                    )}
+                    </div>
+                </div>
+                <div className="image">
+                        <img src="src/assets/calorief.jpg" alt="image1" />
+                    </div>
+        </div>
+        <div className="second">
+            <div className="text2">
+                <h1>Records of 101 Foods.</h1>
+                <p>Analyze your meals, track your calories, and make informed food choices to achieve your health goals.</p>
             </div>
+            <div className="image2">
+                <img src="src/assets/calorieg.jpg" alt="image2" />
+            </div>
+        </div>
+
+        <div className="third">
+            <div className="text3">
+                <h1>Food recognition model</h1>
+                <p>Calorie Counter App leverages advanced deep learning models to accurately identify food items and provide precise nutritional information. We have experimented with multiple CNN architectures to ensure the best possible performance. Our basic CNN model achieved an accuracy of 48%, offering a foundational approach to food recognition. By implementing InceptionV3, a more sophisticated model known for its deep architecture and efficient feature extraction, we improved accuracy to 66%. Finally, we adopted MobileNetV2, a lightweight yet powerful model optimized for mobile devices, achieving an impressive 74% accuracy. With these AI-driven enhancements, our app ensures reliable food detection, helping users effortlessly track their calorie intake and make informed dietary choices.</p>
+
+            </div>
+        </div>
+
+        <footer class="footers">
+            <div class="footer-link">
+                
+                <a href="#">Blog</a>
+                <a href="#">Terms and Conditions</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">API</a>
+                <a href="#">Feedback</a>
+                <a href="#">Community Guidelines</a>
+            <a href="#">Cookie Preferences</a>
+            </div>
+            <p>© 2025 CalorieCounter, Inc.</p>
+        </footer>
             
-            <div className="text-container">
+            {/* <div className="text-container">
                 <div className="text-box">
-                    <p>A calorie counter app is a digital tool designed to help individuals track their daily food intake and monitor their calorie consumption. These apps typically allow users to input the foods they eat, either by manually entering them or by scanning barcodes. The app then calculates the calorie count, along with other nutritional information such as protein, carbohydrates, and fat. Many calorie counter apps also provide features like meal planning, recipe databases, exercise tracking, and personalized goal setting to assist users in achieving their dietary and fitness objectives. By using a calorie counter app, individuals can gain insights into their eating habits, make informed food choices, and potentially manage their weight more effectively.</p>
+                    <p>
+                    A calorie counter WebApp helps users track their daily food intake and monitor their nutritional consumption, including calories, protein, fats, and carbohydrates. It allows users to use image recognition to detect food and estimate its nutritional values. By setting personalized goals based on weight, height, gender, the app provides insights into maintaining a balanced diet. With features like real-time progress tracking, and reminders, a calorie counter app makes healthy eating more accessible and effective.</p>
                 </div>
 
                 <div className="text-box">
-                    <p>A calorie counter app is a digital tool designed to help individuals track their daily food intake and monitor their calorie consumption. These apps typically allow users to input the foods they eat, either by manually entering them or by scanning barcodes. The app then calculates the calorie count, along with other nutritional information such as protein, carbohydrates, and fat. Many calorie counter apps also provide features like meal planning, recipe databases, exercise tracking, and personalized goal setting to assist users in achieving their dietary and fitness objectives. By using a calorie counter app, individuals can gain insights into their eating habits, make informed food choices, and potentially manage their weight more effectively.</p>
+                    <p>Our Calorie Counter App leverages advanced deep learning models to accurately identify food items and provide precise nutritional information. We have experimented with multiple CNN architectures to ensure the best possible performance. Our basic CNN model achieved an accuracy of 48%, offering a foundational approach to food recognition. By implementing InceptionV3, a more sophisticated model known for its deep architecture and efficient feature extraction, we improved accuracy to 66%. Finally, we adopted MobileNetV2, a lightweight yet powerful model optimized for mobile devices, achieving an impressive 74% accuracy. With these AI-driven enhancements, our app ensures reliable food detection, helping users effortlessly track their calorie intake and make informed dietary choices.</p>
                 </div>
-            </div>
-            <div className="calculate-btn-container">
-                {IsLoggedIn ? (
-                    <div className="btn">
-                        <button onClick= {handleNavigate}>Calculate your Calories<FaLongArrowAltRight /></button>
-                        <button onClick={handleGoToNutrition}>Know your Nutrional Information<FaLongArrowAltRight /></button>
-                    </div>
-                ):(
-                    <button onClick= {handleLogin}>Calculate your Calories<FaLongArrowAltRight /></button>
-                    
-                )}
-                
-            </div>
+            </div> */}
+           
         </div>
     )
 }
